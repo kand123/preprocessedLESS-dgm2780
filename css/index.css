@@ -146,21 +146,34 @@ header {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2%;
+}
+header img.centered {
+  width: 175px;
+  margin-top: 80px;
 }
 main {
   margin: 0 auto;
 }
 section#about {
   max-width: 1070px;
-  padding: 0 3%;
+  padding: 6% 0;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2%;
 }
 section#about img {
   width: 100%;
+}
+section#about .contentblock {
+  padding: 0 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2%;
 }
 section#homevideo {
   display: flex;
