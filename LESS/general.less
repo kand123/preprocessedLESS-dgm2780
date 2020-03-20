@@ -1,9 +1,40 @@
 //nav, footer, and any general styles to apply across all pages in the site
 
-header h1 {visibility: hidden;}
+// header h1 {visibility: hidden;}
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    img.centered {
+        width: 175px;
+        margin-top: 80px;
+    }
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+}
+
+p {
+    padding: 2% 0;
+}
+
+button {
+    .buttonstyle();
+}
+
+
+section {
+    margin: 50px 0;
+}
 
 
 footer {
     background-color: lightgray;
+    padding: 10px 0;
 }
+

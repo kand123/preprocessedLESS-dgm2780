@@ -1,6 +1,6 @@
 
 
-header {
+header.showimage {
     background-image: url("../images/header1.jpg");
     height: 100vh;
     background-size: cover;
@@ -8,17 +8,20 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 2%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    // padding-bottom: 2%;
+    
     img.centered {
         width: 175px;
         margin-top: 80px;
     }
-   
+
   }
+
+ 
 
 main {
     margin: 0 auto;
@@ -27,16 +30,24 @@ main {
 section#about {
     max-width: 1070px;
     padding: 6% 0;
-    margin: 0 auto;
+    margin: 30px auto;
     
     img {width: 100%;}
     .contentblock {
 padding: 0 3%;
 display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2%;
+    column-gap: 5%;
+   button {
+       margin-top: 100px;
+   }
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
+
 
 
 
