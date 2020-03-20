@@ -142,6 +142,8 @@ html {
   display: inline-block;
   letter-spacing: 0.2rem;
   margin: 40px 0;
+  min-width: 150px;
+  max-width: 200px;
 }
 .buttonstyle:hover {
   background-color: #333;
@@ -163,6 +165,9 @@ h2 {
   font-size: 2.2rem;
   margin-bottom: 60px;
 }
+main {
+  margin: 0 auto;
+}
 p {
   padding: 2% 0;
 }
@@ -173,6 +178,8 @@ button {
   display: inline-block;
   letter-spacing: 0.2rem;
   margin: 40px 0;
+  min-width: 150px;
+  max-width: 200px;
 }
 button:hover {
   background-color: #333;
@@ -180,11 +187,18 @@ button:hover {
   transition: background 0.35s ease-in-out;
 }
 section {
-  margin: 50px 0;
+  margin: 40px 0;
 }
 footer {
   background-color: lightgray;
-  padding: 10px 0;
+  padding: 0;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer img {
+  width: 175px;
 }
 header.showimage {
   background-image: url("../images/header1.jpg");
@@ -194,17 +208,13 @@ header.showimage {
   background-repeat: no-repeat;
   opacity: 0.9;
 }
-header.showimage img.centered {
-  width: 175px;
-  margin-top: 80px;
-}
 main {
   margin: 0 auto;
 }
 section#about {
   max-width: 1070px;
   padding: 6% 0;
-  margin: 30px auto;
+  margin: 30px auto 0px auto;
 }
 section#about img {
   width: 100%;
@@ -226,10 +236,28 @@ section#homevideo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1070px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6% 0;
+}
+section#homevideo img {
+  width: 100%;
+}
+section#feature {
+  margin-bottom: 95px;
 }
 section#feature img {
   width: 100%;
+}
+section#feature .overlay_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+footer .instaphotos {
+  display: flex;
+  max-width: 1100px;
 }
 header {
   background-image: none;
