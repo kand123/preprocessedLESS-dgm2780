@@ -153,16 +153,81 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
 }
-header {
+header img.centered {
+  width: 175px;
+  margin-top: 80px;
+  position: relative;
+}
+header .centerDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2%;
+  height: 100vh;
+  padding-bottom: 0;
+  position: relative;
 }
-header img.centered {
-  width: 175px;
-  margin-top: 80px;
+nav {
+  background-color: transparent;
+  margin-bottom: 0;
+  width: 25%;
+  z-index: 1;
+  position: absolute;
+  left: 12%;
+  top: 17%;
+}
+nav .open {
+  background-color: #222;
+  color: #fff;
+}
+nav .open:hover {
+  background-color: #222;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  display: block;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+nav #navButton span:nth-child(1) {
+  display: block;
+}
+nav #navButton span:nth-child(2) {
+  display: none;
+}
+nav #navButton.open span:nth-child(1) {
+  display: none;
+}
+nav #navButton.open span:nth-child(2) {
+  display: block;
+}
+nav #primaryNav {
+  height: 0;
+  overflow: hidden;
+  width: 152px;
+  margin-left: 2%;
+  background-color: #222;
+}
+nav #primaryNav.open {
+  height: auto;
+}
+nav button {
+  margin: 0.2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 0.8rem;
+  color: #222;
+}
+nav button:hover {
+  background-color: transparent;
+  color: #fff;
+  transition: background 0.35s ease-in-out;
 }
 h2 {
   font-size: 2.2rem;

@@ -7,16 +7,109 @@ body {
 }
 
 header {
+    // position: sticky;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    
+    img.centered {
+        width: 175px;
+        margin-top: 80px;
+        position: relative;
+    }
+    .centerDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 2%;
-    img.centered {
-        width: 175px;
-        margin-top: 80px;
+    height: 100vh;
+    padding-bottom: 0;
+    position: relative;
     }
 }
+
+nav {
+    background-color: transparent;
+    margin-bottom: 0; 
+    width: 25%;
+    z-index:  1;
+    position:absolute;
+    left: 12%;
+    top: 17%;
+    .open {
+        background-color: #222;
+        color: #fff;
+    &:hover {
+    background-color: #222;
+}
+    }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  
+  ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: #fff;
+font-size: .9rem;}
+    // border-top: 1px solid rgba(184, 178, 178, 0.5); }
+  
+//   ul li.active a {
+//     background-color: lighten(#7AE1EA, 20%);
+//     color: #000; }
+  
+//   ul li a:hover {
+//     background-color: lighten(#7AE1EA, 50%);
+//     color: #000; }
+  
+//   ul.hide {
+//     display: none; }
+
+//   ul.close {
+    
+//   }  
+
+
+
+#navButton span:nth-child(1) {display:block;}
+#navButton span:nth-child(2) {display: none;}
+
+#navButton.open span:nth-child(1) {display:none;}
+#navButton.open span:nth-child(2) {display: block;}
+
+
+
+#primaryNav {
+    height: 0;
+    overflow: hidden;
+    width: 152px;
+    margin-left: 2%;
+    background-color: #222;
+}
+
+#primaryNav.open {
+    height: auto;
+}
+
+  button {
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: .8rem;
+        color: #222;
+    &:hover { 
+            background-color: transparent;
+        color: #fff;
+            transition: background 0.35s ease-in-out;
+            }
+     }
+    
+}
+
 
 h2 {
     font-size: 2.2rem;
