@@ -10,22 +10,29 @@
   </head>
   <body>
     <header>
-      <a href="index.html"
+		<nav id="blackNav">
+			<button id="navButton" onclick="toggleMenu()">
+				<span>&#9776; MENU</span>
+				<span>&otimes; CLOSE</span>
+			</button>
+		  <ul id="primaryNav" class="hide">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">CONTACT</a></li>
+		  </ul>
+		</nav>
+	  <div class="secondaryHeader"> 
+		<a href="index.html"
         ><img class="centered" src="images/calmmindlogo.png" alt="companylogo"
       /></a>
-      <nav>
-        <button id="navButton" onclick="toggleMenu()">
-            <span>&#9776; MENU</span>
-            <span>&otimes; CLOSE</span>
-        </button>
-      <ul id="primaryNav" class="hide">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Opinion</a></li>
-        <li class="active"><a href="#">Politics</a></li>
-        <li><a href="#">Business</a></li>
-      </ul>
-    </nav>
+	
+	  
+	</div> <!--closes centered-->
     </header>
+
+
+    
     <main>
       <section class="spread">
         <div class="contentblock">
@@ -88,21 +95,31 @@
           </div>
         </div>
       </section>
+      
       <section id="testimonials" class="spread">
       <h2>What Our Clients Say</h2>
+      <button class="round">PLAY</button>
 <img src="images/womanlooking.jpg" alt="" />
     </section>
     </main>
     <footer>
-      <div class="instaphotos">
-        <img src="images/womaninsauna.jpg" alt="" />
-        <img src="images/eyewithflower.jpg" alt="" />
-        <img src="images/prep.jpg" alt="" />
-        <img src="images/massageoil.jpg" alt="" />
-        <img src="images/candles.jpg" alt="" />
-        <img src="images/pedicure.jpg" alt="" />
-      </div>
-      <p>&copy; 2020 KRISTIN ANDREWS FOR DGM 2780</p>
+		<a href="https://www.instagram.com/" target="_blank"><div class="overlaytext">
+		<p>@calmmindspautah</p>
+	</div></a>
+	<a href="https://www.instagram.com/" target="_blank">
+		<div class="instaphotos">
+			<img src="images/womaninsauna.jpg" alt="">
+			<img src="images/eyewithflower.jpg" alt="">
+			<img src="images/prep.jpg" alt="">
+			<img src="images/massageoil.jpg" alt="">
+			<img src="images/candles.jpg" alt="">
+			<img src="images/pedicure.jpg" alt="">
+			
+				</div>
+			</a>
+	  <p>&copy; 2020 KRISTIN ANDREWS FOR DGM 2780</p>
+	
     </footer>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

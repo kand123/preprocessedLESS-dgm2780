@@ -147,14 +147,14 @@ html {
 }
 .buttonstyle:hover {
   background-color: #333;
-  color: #fff;
+  color: #a6ebf1;
   transition: background 0.35s ease-in-out;
 }
 .roundbutton {
   background-color: #fff;
   border: none;
   color: #000;
-  padding: 25px 25px 25px 27px;
+  padding: 25px 25px 25px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -163,13 +163,18 @@ html {
   border-radius: 50%;
   width: 64px;
   min-width: 50px;
+  display: flex;
+  justify-content: center;
 }
 .roundbutton:hover {
   transition: background 1s ease-in-out;
-  color: #fff;
+  color: #a6ebf1;
 }
 body {
   font-family: 'Montserrat', sans-serif;
+}
+main {
+  margin: 0 auto;
 }
 header img.centered {
   width: 175px;
@@ -183,6 +188,12 @@ header .centerDiv {
   justify-content: space-between;
   height: 100vh;
   padding-bottom: 0;
+  position: relative;
+}
+.secondaryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 nav {
@@ -208,10 +219,16 @@ nav ul {
 }
 nav ul li a {
   display: block;
-  padding: 1.2rem 1rem;
+  padding: 1.1rem 1rem;
   text-decoration: none;
   color: #fff;
   font-size: 0.9rem;
+}
+nav ul li a:active {
+  background-color: #3c3c3c;
+}
+nav #navButton {
+  width: 175px;
 }
 nav #navButton span:nth-child(1) {
   display: block;
@@ -228,7 +245,7 @@ nav #navButton.open span:nth-child(2) {
 nav #primaryNav {
   height: 0;
   overflow: hidden;
-  width: 152px;
+  width: 175px;
   margin-left: 2%;
   background-color: #222;
 }
@@ -244,7 +261,7 @@ nav button {
 }
 nav button:hover {
   background-color: transparent;
-  color: #fff;
+  color: #bcf0f4;
   transition: background 0.35s ease-in-out;
 }
 h2 {
@@ -260,6 +277,8 @@ main {
 }
 p {
   padding: 2% 0;
+  font-size: 0.85rem;
+  line-height: 2rem;
 }
 button {
   border: 1px solid #999;
@@ -273,14 +292,14 @@ button {
 }
 button:hover {
   background-color: #333;
-  color: #fff;
+  color: #a6ebf1;
   transition: background 0.35s ease-in-out;
 }
 .round {
   background-color: #fff;
   border: none;
   color: #000;
-  padding: 25px 25px 25px 27px;
+  padding: 25px 25px 25px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -289,10 +308,20 @@ button:hover {
   border-radius: 50%;
   width: 64px;
   min-width: 50px;
+  display: flex;
+  justify-content: center;
 }
 .round:hover {
   transition: background 1s ease-in-out;
-  color: #fff;
+  color: #a6ebf1;
+}
+.overlaytext {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 0.6rem;
+  z-index: 1;
+  left: 44.5%;
 }
 section {
   margin: 40px auto;
@@ -300,13 +329,22 @@ section {
 footer {
   background-color: lightgray;
   padding: 0;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer img {
-  width: 175px;
+  width: 100%;
+}
+footer .instaphotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 1100px;
+  position: relative;
+}
+footer .overlaytext {
+  margin-top: 4.5rem;
 }
 header.showimage {
   background-image: url("../images/header1.jpg");
@@ -316,16 +354,16 @@ header.showimage {
   background-repeat: no-repeat;
   opacity: 0.9;
 }
-main {
-  margin: 0 auto;
-}
 section#about {
   max-width: 1070px;
-  padding: 6% 0;
+  padding: 6% 0 4% 0;
   margin: 30px auto 0px auto;
 }
 section#about img {
   width: 100%;
+}
+section#about p {
+  font-size: 1.2rem;
 }
 section#about .contentblock {
   padding: 0 3%;
@@ -335,10 +373,6 @@ section#about .contentblock {
 }
 section#about .contentblock button {
   margin-top: 100px;
-}
-section#about p {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 section#homevideo {
   display: flex;
@@ -355,7 +389,7 @@ section#homevideo img {
 section#homevideo button {
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 46.6%;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -367,6 +401,10 @@ section#feature {
 section#feature img {
   width: 100%;
 }
+section#feature h3,
+section#feature h4 {
+  color: white;
+}
 section#feature .overlay_text {
   display: flex;
   flex-direction: column;
@@ -374,17 +412,13 @@ section#feature .overlay_text {
   text-align: center;
   position: absolute;
   top: 35%;
-  left: 40%;
+  left: 41%;
 }
 section#feature .overlay_text h3 {
   padding: 15px;
 }
 section#feature .overlay_text button {
   border: none;
-}
-footer .instaphotos {
-  display: flex;
-  max-width: 1100px;
 }
 header {
   background-image: none;
@@ -410,7 +444,11 @@ header {
 section.spread {
   padding-bottom: 100px;
   border-bottom: 1px solid #aaa;
+  padding-top: 80px;
   max-width: 1100px;
+}
+section.spread p {
+  font-size: 1.2rem;
 }
 section.width_constraint img {
   width: 100%;
@@ -431,8 +469,15 @@ section#testimonials {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   max-width: 1100px;
 }
 section#testimonials img {
   width: 100%;
+}
+section#testimonials button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
 }
