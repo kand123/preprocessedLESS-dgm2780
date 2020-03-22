@@ -177,6 +177,7 @@ main {
   margin: 0 auto;
 }
 header img.centered {
+  width: 100px;
   width: 175px;
   margin-top: 80px;
   position: relative;
