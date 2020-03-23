@@ -1,205 +1,188 @@
-//nav, footer, and any general styles to apply across all pages in the site
-
-// header h1 {visibility: hidden;}
+// general styles
 
 body {
-    font-family: @main-font;
+  font-family: @main-font;
+  margin: 0 auto;
 }
 
 main {
-    margin: 0 auto;
-  
+  margin: 0 auto;
 }
 
+section {
+  margin: 40px auto;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  @media @phone {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+  padding: 12% 0;
+  @media @phone {
+    font-size: 1.3rem;
+    padding: 10% 0;
+  }
+}
+
+p {
+  padding: 2% 0;
+  font-size: 0.85rem;
+  line-height: 2rem;
+}
+
+
+
+
+// header, nav, footer styles that apply to all pages on the site
+
+
+
+
+
+// Header styles
+
 header {
-    // position: sticky;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: space-between;
-    
-    img.centered {
-        width: 100px;
-        width: 175px;
-        margin-top: 80px;
-        position: relative;
+  img.centered {
+    width: 175px;
+    @media @phone {
+      width: 130px;
     }
-    .centerDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 80px;
+    position: relative;
+  }
+  .centerDiv {
+   .flexcolumn();
     justify-content: space-between;
     height: 100vh;
     padding-bottom: 0;
     position: relative;
-    }
+  }
 }
 
-.secondaryHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-position: relative;
-// padding-bottom: 10px;
-}
-
+// Nav styles
 
 nav {
-    background-color: transparent;
-    
-    margin-bottom: 0; 
-    width: 25%;
-    
-    z-index:  1;
-    position:absolute;
-    
-    left: 12%;
-    top: 17%;
-    .open {
-        background-color: #222;
-        color: #fff;
-    &:hover {
-    background-color: #222;
-}
-    }
-  
+  background-color: transparent;
+  margin-bottom: 0;
+  width: 25%;
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; }
-  
+    margin: 0;
+  }
   ul li a {
     display: block;
     padding: 1.1rem 1rem;
     text-decoration: none;
     color: #fff;
-font-size: .9rem;
+    font-size: 0.9rem;
+  }
+  ul li a:active {
+    background-color: lighten(@secondNeutral, 10%);
+  }
+  z-index: 1;
+  position: absolute;
+  left: 12%;
+  top: 17%;
+  @media @phone {
+    top: 17%;
+    left: 7%;
+  }
 
-}
-
-ul li a:active {
-    background-color: lighten(#222,10%)
-}
-
-    // border-top: 1px solid rgba(184, 178, 178, 0.5); }
-  
-//   ul li.active a {
-//     background-color: lighten(#7AE1EA, 20%);
-//     color: #000; }
-  
-//   ul li a:hover {
-//     background-color: lighten(#7AE1EA, 50%);
-//     color: #000; }
-  
-//   ul.hide {
-//     display: none; }
-
-//   ul.close {
+  #navButton {
+    .buttonstyle();
+    border: none;
+    width: 175px;
+    @media @phone {
+      width: 75px;
+    }
+    &:hover {
+      background-color: transparent;
+    }
     
-//   }  
+    span:nth-child(1) {
+      display: block;
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+  }
 
-#navButton {width: 175px;}
+  #navButton.open {
+      background-color: @secondNeutral;
+      transition: none;
+  }
+  #navButton.open span:nth-child(1) {
+    display: none;
+  }
+  #navButton.open span:nth-child(2) {
+    display: block;
+  }
 
-#navButton span:nth-child(1) {display:block;}
-#navButton span:nth-child(2) {display: none;}
-
-#navButton.open span:nth-child(1) {display:none;}
-#navButton.open span:nth-child(2) {display: block;}
-
-
-
-#primaryNav {
+  #primaryNav {
     height: 0;
     overflow: hidden;
     width: 175px;
     margin-left: 2%;
-    background-color: #222;
-}
-
-#primaryNav.open {
+    @media @phone {
+      width: 80vw;
+    }
+  }
+  #primaryNav.open {
     height: auto;
-}
+  }
+  .open {
+    background-color: #222;
+    color: #fff;
 
-  button {
-        margin: .2rem 2%;
-        background-color: transparent;
-        border: none;
-        font-size: .8rem;
-        color: #222;
-    &:hover { 
-            background-color: transparent;
-        color: lighten(#7AE1EA,15%);
-            transition: background 0.35s ease-in-out;
-            }
-     }
-    
+  }
 }
 
 
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 60px;
-}
 
-h3 {
-    font-size: 1.6rem;
-    padding: 12% 0;
-}
+// Footer styles
 
-main {
-    margin: 0 auto;
-}
+footer {
+  background-color: lightgray;
+  padding: 0;
+  font-size: 0.7rem;
+  .flexcolumn();
+  img {
+    width: 100%;
+  }
 
-p {
-    padding: 2% 0;
-    font-size: .85rem;
-    line-height: 2rem;
-}
-
-button {
-    .buttonstyle();
-}
-
-.round {
-    .roundbutton();
-}
-
-.overlaytext {
+  .instaphotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1100px;
+    position: relative;
+    @media @phone {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4%;
+      row-gap: 4%;
+      margin: 6%;
+      margin-bottom: 12%;
+    }
+  }
+  .overlaytext {
     position: absolute;
     background-color: white;
     color: black;
-    padding: .6rem;
+    padding: 0.6rem;
     z-index: 1;
     left: 44.5%;
-}
-
-section {
-    margin: 40px auto;
-    
-}
-
-
-footer {
-    background-color: lightgray;
-    padding: 0;
-    font-size: .7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-        width: 100%;
+    margin-top: 4.5rem;
+    @media @phone {
+      margin-top: 248px;
+      margin-right: 200px;
+      left: 29%;
     }
-}
-
-footer {
-    .instaphotos {
-        display: grid; 
-       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    
-        max-width: 1100px;
-        position: relative;
-    }
-    .overlaytext {
-       margin-top: 4.5rem;
-    }
+  }
 }

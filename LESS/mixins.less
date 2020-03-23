@@ -1,18 +1,20 @@
 .buttonstyle {
     border: 1px solid #999;
     padding: 15px 35px;
-    font-size: .85rem;
+    background-color: transparent;
+    font-size: .8rem;
     display: inline-block;
     letter-spacing: .2rem;
-    margin: 40px 0;
+    margin: .2rem 2%;
     min-width: 150px;
     max-width: 200px;
+    @media @phone {padding: 15px 12px; min-width: 50px; letter-spacing: .11rem; }
     &:hover { 
-        background-color: #333;
-        color: lighten(#7AE1EA,10%);
+        background-color: @darkNeutral;
+        color: lighten(@primaryBlue,10%);
         transition: background 0.35s ease-in-out;
         }
-        
+        // color: #222;
 }
 
 
@@ -31,28 +33,18 @@
         min-width: 50px;
         display:flex;
         justify-content:center;
+        @media @phone {padding: 25px 15px;}
         &:hover {
-            // background-color: lighten(#fff, 55%);
             transition: background 1s ease-in-out;
-            color: lighten(#7AE1EA,10%);
+            color: lighten(@primaryBlue,10%);
+
         }
     
 }
 
 
-// .responsive_phone (@phone, @rules) {
-//         @rules();  
-// }
-
-// .responsive_tablet(@size, @rules) {
-//         @rules();
-// }
-
-// .responsive_desktop(@size, @rules){
-//     @rules();
-// }
-
-.responsive(@media, @rules) {
-        @rules();
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 }
-

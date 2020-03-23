@@ -4,35 +4,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home: Calm Mind Spa</title>
-	<link rel="stylesheet" href="css/index.css" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+
+	<!-- Header with Nav -->
+
     <header class="showimage">
-		<nav id="blackNav">
-			<button id="navButton" onclick="toggleMenu()">
-				<span>&#9776; MENU</span>
-				<span>&otimes; CLOSE</span>
-			</button>
-		  <ul id="primaryNav" class="hide">
-			<li><a href="index.html">HOME</a></li>
-			<li><a href="about.html">ABOUT</a></li>
-			<li><a href="#">SERVICES</a></li>
-			<li><a href="#">CONTACT</a></li>
-		  </ul>
-		</nav>
-	  <div class="centerDiv"> 
-		<a href="index.html"
-        ><img class="centered" src="images/calmmindlogo.png" alt="companylogo"
-      /></a>
+      <nav>
+        <button id="navButton" onclick="toggleMenu()">
+          <span>&#9776; MENU</span>
+          <span>&otimes; CLOSE</span>
+        </button>
+        <ul id="primaryNav" >
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="centerDiv">
+        <a href="index.html"
+          ><img class="centered" src="images/calmmindlogo.png" alt="companylogo"
+        /></a>
+        <p>LOCATED IN SANDY, UTAH</p>
+      </div><!--closes centered-->
+	</header>
 	
-	  <p>LOCATED IN SANDY, UTAH</p>
-	</div> <!--closes centered-->
-    </header>
+
     <main>
-		
+
+		<!-- Section 1  -->
+
       <section id="about">
         <div class="contentblock">
           <div class="block1">
@@ -56,41 +68,59 @@
           <img src="images/relaxingseatbypool.jpg" alt="" />
         </div>
         <!--closes contentblock-->
-      </section>
+	  </section>
+	  
+
+		<!-- Section 2	   -->
+
       <section id="homevideo">
-		<h2>THE SCIENCE BEHIND RELAXATION</h2>
-		<div class="hiddenvideo">
-			<a href="#homevideo"><button class="round">PLAY</button></a>
-	   <img src="images/stackedstones.jpg" alt="stackedstones"/>  
-	</div>   <!--closes hiddenvideo class-->
-	 </section>
+        <h2>THE ART OF RELAXATION</h2>
+        <div class="hiddenvideo">
+          <a href="#homevideo"><button>PLAY</button></a>
+          <img src="images/stackedstones.jpg" alt="stackedstones" />
+        </div>
+        <!--closes hiddenvideo class-->
+	  </section>
+	  
+
+	  <!-- Section 3  -->
+
       <section id="feature">
-		  <div class="overlay_text">
-		<h3>SERVICES</h3>
-		<h4>Pamper Yourself With a Spa Day</h4>
-		<a href="#feature"><button>BOOK</button></a>
-	</div>
+        <div class="overlay_text">
+          <h3>SERVICES</h3>
+          <h4>Pamper Yourself With a Spa Day</h4>
+          <a href="#feature"><button>BOOK</button></a>
+        </div>
         <img src="images/womangettingfacialmask.jpg" alt="" />
-      </section>
-    </main>
-    <footer>
-		<a href="https://www.instagram.com/" target="_blank"><div class="overlaytext">
-		<p>@calmmindspautah</p>
-	</div></a>
-	<a href="https://www.instagram.com/" target="_blank">
-		<div class="instaphotos">
-			<img src="images/womaninsauna.jpg" alt="">
-			<img src="images/eyewithflower.jpg" alt="">
-			<img src="images/prep.jpg" alt="">
-			<img src="images/massageoil.jpg" alt="">
-			<img src="images/candles.jpg" alt="">
-			<img src="images/pedicure.jpg" alt="">
-			
-				</div>
-			</a>
-	  <p>&copy; 2020 KRISTIN ANDREWS FOR DGM 2780</p>
+	  </section>
+	  
+
+	</main>
+
 	
-    </footer>
+	<!-- Footer -->
+
+
+    <footer>
+      <a href="https://www.instagram.com/" target="_blank">
+        <div class="overlaytext">
+          <p>@calmmindspautah</p>
+        </div></a
+      >
+      <a href="https://www.instagram.com/" target="_blank">
+        <div class="instaphotos">
+          <img src="images/womaninsauna.jpg" alt="" />
+          <img src="images/eyewithflower.jpg" alt="" />
+          <img src="images/prep.jpg" alt="" />
+          <img src="images/massageoil.jpg" alt="" />
+          <img src="images/candles.jpg" alt="" />
+          <img src="images/pedicure.jpg" alt="" />
+        </div>
+      </a>
+      <p>&copy; 2020 KRISTIN ANDREWS FOR DGM 2780</p>
+	</footer>
+	
+
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

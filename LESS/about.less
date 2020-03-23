@@ -1,62 +1,108 @@
 //This is for About Us subpage specific styles
 
+// Header styles specific to this page
+
 header {
-    background-image: none;
+  .secondaryHeader {
+    .flexcolumn();
+    position: relative;
+  }
 }
 
 
 
-.contentblock {
+// Section 1
+
+section.spread {
+  padding-bottom: 100px;
+  border-bottom: 1px solid #aaa;
+  padding-top: 80px;
+  @media @phone {
+    padding-bottom: 60px;
+    padding-top: 40px;
+    row-gap: 5%;
+  }
+  max-width: 1100px;
+  p {
+    font-size: 1.2rem;
+    @media @phone {
+      font-size: 1rem;
+    }
+  }
+  .contentblock {
     margin: 0 auto;
     max-width: 1100px;
     padding: 0 3%;
     display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 5%;
-        
-        p {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-        img {width: 100%;}
-        .intro {
-            align-self: center;
-    
-        }
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    @media @phone {
+      grid-template-columns: 1fr;
     }
-
-    section.spread {
-        padding-bottom: 100px;
-        border-bottom: 1px solid #aaa;
-        padding-top: 80px;
-        max-width: 1100px;
-        p{font-size: 1.2rem;}
-
+    p {
+      font-size: 1.3rem;
+      line-height: 2rem;
     }
-
-    section.width_constraint img {
-        width: 100%;
+    img {
+      width: 100%;
     }
-
-    div#bios {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 2%;
-        padding: 2%;
-        p {
-            font-size: 1.2rem;
-            line-height: 2rem;
-            padding-right: 5%;
-        }
+    .intro {
+      align-self: center;
     }
+  }
+}
 
-    section#testimonials {
-        display: flex; 
-        flex-direction:column;
-        align-items:center;
-        justify-content: center;
-position: relative;
-        max-width: 1100px;
-        img {width: 100%;}
-        button{position: absolute; display:flex; justify-content: center; top: 50%; }
+
+
+
+// Section 2
+
+section.width_constraint {
+  img {
+    width: 100%;
+  }
+  div#bios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2%;
+    @media @phone {
+      grid-template-columns: 1fr;
     }
+    padding: 2%;
+    p {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      padding-right: 5%;
+      @media @phone {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+// Section 3
+
+section#testimonials {
+  .flexcolumn();
+  justify-content: center;
+  position: relative;
+  max-width: 1100px;
+  img {
+    width: 100%;
+  }
+  button {
+    .buttonstyle();
+    .roundbutton();
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    @media @phone {
+      top: 44%;
+    }
+  }
+}
