@@ -381,6 +381,9 @@ footer .overlaytext {
     left: 29%;
   }
 }
+img.centered {
+  opacity: 0;
+}
 header.showimage {
   background-image: url("../images/header1.jpg");
   height: 100vh;
